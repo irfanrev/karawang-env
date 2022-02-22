@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:karawang_env/ui/screen/home/home_screen.dart';
+import 'package:karawang_env/ui/screen/register/register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -62,7 +65,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 35,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(HomeScreen(),
+                      transition: Transition.rightToLeftWithFade),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.teal[300],
                     shape: RoundedRectangleBorder(
@@ -85,7 +89,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 10,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(RegisScreen(),
+                      transition: Transition.rightToLeftWithFade),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.grey[400],
                     shape: RoundedRectangleBorder(
