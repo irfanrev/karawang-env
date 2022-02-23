@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:karawang_env/ui/screen/home/home_screen.dart';
 import 'package:karawang_env/ui/screen/register/register_screen.dart';
+import 'package:karawang_env/utils/loading_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -65,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 35,
                 ),
                 ElevatedButton(
-                  onPressed: () => Get.to(HomeScreen(),
+                  onPressed: () => Get.to(LoadingScreen(),
                       transition: Transition.rightToLeftWithFade),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.teal[300],
