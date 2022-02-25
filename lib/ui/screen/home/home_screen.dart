@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: MediaQuery.of(context).size.width,
                 height: 240,
                 decoration: BoxDecoration(
-                  color: Colors.teal[300],
+                  color: Colors.green[400],
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(20),
                     bottomRight: Radius.circular(20),
@@ -133,11 +133,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 100,
                     height: 100,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 156, 212, 157),
+                      color: Colors.green[50],
                       borderRadius: BorderRadius.circular(22),
                     ),
-                    child: Center(
-                      child: Icon(Icons.recycling_rounded),
+                    child: const Center(
+                      child: Icon(
+                        Icons.map_rounded,
+                        size: 50,
+                        color: Colors.green,
+                      ),
                     )),
                 SizedBox(
                   height: 8.0,
@@ -177,11 +181,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 100,
                     height: 100,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 156, 212, 157),
+                      color: Colors.red[50],
                       borderRadius: BorderRadius.circular(22),
                     ),
                     child: Center(
-                      child: Icon(Icons.recycling_rounded),
+                      child: Icon(
+                        Icons.new_releases,
+                        size: 45,
+                        color: Colors.red,
+                      ),
                     )),
                 SizedBox(
                   height: 8.0,
