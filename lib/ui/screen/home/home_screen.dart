@@ -69,6 +69,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                         color: Colors.white,
                                       ),
                                     ),
+                                    Text(
+                                      'Selamat Datang!',
+                                      style: GoogleFonts.poppins(
+                                        fontSize: 18.0,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )
                                   ],
                                 ),
                               ],
@@ -111,6 +119,80 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 156, 212, 157),
+                      borderRadius: BorderRadius.circular(22),
+                    ),
+                    child: Center(
+                      child: Icon(Icons.recycling_rounded),
+                    )),
+                SizedBox(
+                  height: 8.0,
+                ),
+                Text(
+                  'Report',
+                  style: GoogleFonts.poppins(),
+                )
+              ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 156, 212, 157),
+                      borderRadius: BorderRadius.circular(22),
+                    ),
+                    child: Center(
+                      child: Icon(Icons.recycling_rounded),
+                    )),
+                SizedBox(
+                  height: 8.0,
+                ),
+                Text(
+                  'Taman',
+                  style: GoogleFonts.poppins(),
+                )
+              ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 156, 212, 157),
+                      borderRadius: BorderRadius.circular(22),
+                    ),
+                    child: Center(
+                      child: Icon(Icons.recycling_rounded),
+                    )),
+                SizedBox(
+                  height: 8.0,
+                ),
+                Text(
+                  'Berita',
+                  style: GoogleFonts.poppins(),
+                )
+              ],
+            ),
+          ],
         ),
       ],
     ));
