@@ -10,6 +10,10 @@ class TamanScreen extends StatefulWidget {
 class _TamanScreenState extends State<TamanScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(
+        child: Text('Taman Screen'),
+      ),
+    );
   }
 }
