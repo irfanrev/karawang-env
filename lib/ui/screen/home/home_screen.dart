@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:karawang_env/ui/widget/slider.dart';
 
@@ -24,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: MediaQuery.of(context).size.width,
                 height: 240,
                 decoration: BoxDecoration(
-                  color: Colors.green[400],
+                  color: Colors.green[600],
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(20),
                     bottomRight: Radius.circular(20),
@@ -124,7 +125,200 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
+          height: 20,
+        ),
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          margin: EdgeInsets.symmetric(horizontal: 20),
+          width: Get.width,
+          height: 100,
+          decoration: BoxDecoration(
+            color: Colors.indigo,
+            borderRadius: BorderRadius.circular(12),
+            gradient: LinearGradient(
+              colors: [Colors.indigo, Colors.blueAccent],
+            ),
+          ),
+          child: Row(
+            children: [
+              SizedBox(
+                width: 10.0,
+              ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'TOTAL TITIK SAMPAH',
+                      style: GoogleFonts.poppins(
+                        fontSize: 18.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      '35',
+                      style: GoogleFonts.poppins(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: 70,
+                height: 70,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.white, width: 4)),
+                child: Image.asset('assets/img/sampah.png'),
+              )
+            ],
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Row(
+            children: [
+              Expanded(
+                child: Container(
+                  height: 120,
+                  child: Container(
+                    padding: EdgeInsets.all(10.0),
+                    width: Get.width,
+                    height: Get.height,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.grey[100],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(3.0),
+                          decoration: BoxDecoration(
+                            color: Colors.yellow[50],
+                            shape: BoxShape.circle,
+                          ),
+                          child: Icon(
+                            Icons.delete_outline,
+                            size: 20,
+                            color: Colors.yellow,
+                          ),
+                        ),
+                        Text('Titik Sampah', style: GoogleFonts.poppins()),
+                        Text(
+                          '20',
+                          style: GoogleFonts.poppins(
+                            fontSize: 20.0,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 10.0,
+              ),
+              Expanded(
+                child: Container(
+                  height: 120,
+                  child: Container(
+                    padding: EdgeInsets.all(10.0),
+                    width: Get.width,
+                    height: Get.height,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.grey[100],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(3.0),
+                          decoration: BoxDecoration(
+                            color: Colors.green[50],
+                            shape: BoxShape.circle,
+                          ),
+                          child: Icon(
+                            Icons.done_rounded,
+                            size: 20,
+                            color: Colors.green,
+                          ),
+                        ),
+                        Text('Ditangani', style: GoogleFonts.poppins()),
+                        Text(
+                          '20',
+                          style: GoogleFonts.poppins(
+                            fontSize: 20.0,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 10.0,
+              ),
+              Expanded(
+                child: Container(
+                  height: 120,
+                  child: Container(
+                    width: Get.width,
+                    height: Get.height,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.grey[100],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(3.0),
+                          decoration: BoxDecoration(
+                            color: Colors.red[50],
+                            shape: BoxShape.circle,
+                          ),
+                          child: Icon(
+                            Icons.delete_forever_rounded,
+                            size: 20,
+                            color: Colors.red,
+                          ),
+                        ),
+                        Text('Belum Ditangani', style: GoogleFonts.poppins()),
+                        Text(
+                          '20',
+                          style: GoogleFonts.poppins(
+                            fontSize: 20.0,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(
           height: 20,
         ),
         Row(
