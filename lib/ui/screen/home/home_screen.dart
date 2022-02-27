@@ -170,13 +170,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Container(
-                width: 70,
-                height: 70,
+                width: 55,
+                height: 55,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(color: Colors.white, width: 4)),
                 child: Image.asset('assets/img/sampah.png'),
-              )
+              ),
+              SizedBox(
+                width: 10,
+              ),
             ],
           ),
         ),
@@ -214,7 +217,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Colors.yellow,
                           ),
                         ),
+                        SizedBox(
+                          height: 8.0,
+                        ),
                         Text('Titik Sampah', style: GoogleFonts.poppins()),
+                        SizedBox(
+                          height: 8.0,
+                        ),
                         Text(
                           '20',
                           style: GoogleFonts.poppins(
@@ -258,7 +267,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Colors.green,
                           ),
                         ),
+                        SizedBox(
+                          height: 8.0,
+                        ),
                         Text('Ditangani', style: GoogleFonts.poppins()),
+                        SizedBox(
+                          height: 8.0,
+                        ),
                         Text(
                           '20',
                           style: GoogleFonts.poppins(
@@ -279,6 +294,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Container(
                   height: 120,
                   child: Container(
+                    padding: EdgeInsets.all(10.0),
                     width: Get.width,
                     height: Get.height,
                     decoration: BoxDecoration(
@@ -301,7 +317,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Colors.red,
                           ),
                         ),
-                        Text('Belum Ditangani', style: GoogleFonts.poppins()),
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                        Text('Belum ', style: GoogleFonts.poppins()),
+                        SizedBox(
+                          height: 8.0,
+                        ),
                         Text(
                           '20',
                           style: GoogleFonts.poppins(
