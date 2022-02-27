@@ -16,6 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -69,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () => Get.to(LoadingScreen(),
                       transition: Transition.rightToLeftWithFade),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.teal[300],
+                    primary: Colors.green,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),

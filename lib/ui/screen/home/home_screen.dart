@@ -48,35 +48,39 @@ class _HomeScreenState extends State<HomeScreen> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                CircleAvatar(),
-                                SizedBox(
-                                  width: 10,
-                                ),
+                                // CircleAvatar(),
+                                // SizedBox(
+                                //   width: 10,
+                                // ),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      'Hi,',
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 18.0,
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                    Text(
-                                      'Irfan Maulana',
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 18.0,
-                                        color: Colors.white,
-                                      ),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          'Hallo,',
+                                          style: GoogleFonts.poppins(
+                                            fontSize: 18.0,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                        Text(
+                                          ' Irfan Maulana',
+                                          style: GoogleFonts.poppins(
+                                              fontSize: 18.0,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w600),
+                                        ),
+                                      ],
                                     ),
                                     Text(
                                       'Selamat Datang!',
                                       style: GoogleFonts.poppins(
-                                        fontSize: 18.0,
+                                        fontSize: 19.0,
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ],
