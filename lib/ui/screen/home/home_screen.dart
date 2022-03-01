@@ -98,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     onPressed: () {},
                                     icon: Icon(
                                       Icons.notifications_active_outlined,
-                                      color: Colors.lightBlue[400],
+                                      color: Colors.green[400],
                                       size: 28,
                                     ),
                                   ),
@@ -184,7 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         const SizedBox(
-          height: 10,
+          height: 20,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),

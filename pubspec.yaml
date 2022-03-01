@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.1
   supabase: ^0.2.14
   lottie: ^1.2.2
+  curved_navigation_bar: ^1.0.3
 
 dev_dependencies:
   flutter_test:
