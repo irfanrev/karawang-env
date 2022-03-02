@@ -14,421 +14,425 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: PreferredSize(
-            child: SafeArea(
-              child: Container(
-                color: Colors.green[600],
-                width: MediaQuery.of(context).size.width,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 15,
-                        ),
-                        // CircleAvatar(),
-                        // SizedBox(
-                        //   width: 10,
-                        // ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  'Hallo,',
-                                  style: GoogleFonts.poppins(
+      appBar: PreferredSize(
+          child: SafeArea(
+            child: Container(
+              color: Colors.green[600],
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 15,
+                      ),
+                      // CircleAvatar(),
+                      // SizedBox(
+                      //   width: 10,
+                      // ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                'Hallo,',
+                                style: GoogleFonts.poppins(
+                                  fontSize: 18.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Text(
+                                ' Irfan Maulana',
+                                style: GoogleFonts.poppins(
                                     fontSize: 18.0,
                                     color: Colors.white,
-                                  ),
-                                ),
-                                Text(
-                                  ' Irfan Maulana',
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 18.0,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                              ],
-                            ),
-                            Text(
-                              'Selamat Datang!',
-                              style: GoogleFonts.poppins(
-                                fontSize: 19.0,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w600),
                               ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(1),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.circle,
+                            ],
                           ),
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.notifications_active_outlined,
-                              color: Colors.green[400],
-                              size: 28,
+                          Text(
+                            'Selamat Datang!',
+                            style: GoogleFonts.poppins(
+                              fontSize: 19.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(1),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
                         ),
-                        SizedBox(
-                          width: 15,
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.notifications_active_outlined,
+                            color: Colors.green[400],
+                            size: 28,
+                          ),
                         ),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
-            preferredSize: Size.fromHeight(100)),
-        body: ListView(
-          children: [
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: 185,
-              child: Stack(
-                children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: 120,
-                    decoration: BoxDecoration(
-                      color: Colors.green[600],
-                      // borderRadius: BorderRadius.only(
-                      //   bottomLeft: Radius.circular(20),
-                      //   bottomRight: Radius.circular(20),
-                      // ),
+          ),
+          preferredSize: Size.fromHeight(80)),
+      body: ListView(
+        children: [
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: 185,
+            child: Stack(
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.green[600],
+                    // borderRadius: BorderRadius.only(
+                    //   bottomLeft: Radius.circular(20),
+                    //   bottomRight: Radius.circular(20),
+                    // ),
+                  ),
+                ),
+                SizedBox.expand(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: 20,
+                        ),
+                        SliderWidget(),
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                      ],
                     ),
                   ),
-                  SizedBox.expand(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            margin: EdgeInsets.symmetric(horizontal: 20),
+            width: Get.width,
+            height: 100,
+            decoration: BoxDecoration(
+              color: Colors.indigo,
+              borderRadius: BorderRadius.circular(12),
+              gradient: LinearGradient(
+                colors: [Colors.indigo, Colors.blueAccent],
+              ),
+            ),
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 10.0,
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'TOTAL TITIK SAMPAH',
+                        style: GoogleFonts.poppins(
+                          fontSize: 18.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        '35',
+                        style: GoogleFonts.poppins(
+                          fontSize: 20.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  width: 55,
+                  height: 55,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white, width: 4)),
+                  child: Image.asset('assets/img/sampah.png'),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 120,
+                    child: Container(
+                      padding: EdgeInsets.all(10.0),
+                      width: Get.width,
+                      height: Get.height,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.grey[100],
+                      ),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SizedBox(
-                            height: 20,
+                          Container(
+                            padding: EdgeInsets.all(3.0),
+                            decoration: BoxDecoration(
+                              color: Colors.yellow[50],
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(
+                              Icons.delete_outline,
+                              size: 20,
+                              color: Colors.yellow,
+                            ),
                           ),
-                          SliderWidget(),
                           SizedBox(
                             height: 8.0,
+                          ),
+                          Text('Titik Sampah', style: GoogleFonts.poppins()),
+                          SizedBox(
+                            height: 8.0,
+                          ),
+                          Text(
+                            '20',
+                            style: GoogleFonts.poppins(
+                              fontSize: 20.0,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ],
                       ),
                     ),
                   ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
-              margin: EdgeInsets.symmetric(horizontal: 20),
-              width: Get.width,
-              height: 100,
-              decoration: BoxDecoration(
-                color: Colors.indigo,
-                borderRadius: BorderRadius.circular(12),
-                gradient: LinearGradient(
-                  colors: [Colors.indigo, Colors.blueAccent],
                 ),
-              ),
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'TOTAL TITIK SAMPAH',
-                          style: GoogleFonts.poppins(
-                            fontSize: 18.0,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Text(
-                          '35',
-                          style: GoogleFonts.poppins(
-                            fontSize: 20.0,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    width: 55,
-                    height: 55,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(color: Colors.white, width: 4)),
-                    child: Image.asset('assets/img/sampah.png'),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Row(
-                children: [
-                  Expanded(
+                const SizedBox(
+                  width: 10.0,
+                ),
+                Expanded(
+                  child: Container(
+                    height: 120,
                     child: Container(
-                      height: 120,
-                      child: Container(
-                        padding: EdgeInsets.all(10.0),
-                        width: Get.width,
-                        height: Get.height,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: Colors.grey[100],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              padding: EdgeInsets.all(3.0),
-                              decoration: BoxDecoration(
-                                color: Colors.yellow[50],
-                                shape: BoxShape.circle,
-                              ),
-                              child: Icon(
-                                Icons.delete_outline,
-                                size: 20,
-                                color: Colors.yellow,
-                              ),
+                      padding: EdgeInsets.all(10.0),
+                      width: Get.width,
+                      height: Get.height,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.grey[100],
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(3.0),
+                            decoration: BoxDecoration(
+                              color: Colors.green[50],
+                              shape: BoxShape.circle,
                             ),
-                            SizedBox(
-                              height: 8.0,
+                            child: Icon(
+                              Icons.done_rounded,
+                              size: 20,
+                              color: Colors.green,
                             ),
-                            Text('Titik Sampah', style: GoogleFonts.poppins()),
-                            SizedBox(
-                              height: 8.0,
+                          ),
+                          SizedBox(
+                            height: 8.0,
+                          ),
+                          Text('Ditangani', style: GoogleFonts.poppins()),
+                          SizedBox(
+                            height: 8.0,
+                          ),
+                          Text(
+                            '20',
+                            style: GoogleFonts.poppins(
+                              fontSize: 20.0,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
                             ),
-                            Text(
-                              '20',
-                              style: GoogleFonts.poppins(
-                                fontSize: 20.0,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 10.0,
-                  ),
-                  Expanded(
+                ),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                Expanded(
+                  child: Container(
+                    height: 120,
                     child: Container(
-                      height: 120,
-                      child: Container(
-                        padding: EdgeInsets.all(10.0),
-                        width: Get.width,
-                        height: Get.height,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: Colors.grey[100],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              padding: EdgeInsets.all(3.0),
-                              decoration: BoxDecoration(
-                                color: Colors.green[50],
-                                shape: BoxShape.circle,
-                              ),
-                              child: Icon(
-                                Icons.done_rounded,
-                                size: 20,
-                                color: Colors.green,
-                              ),
+                      padding: EdgeInsets.all(10.0),
+                      width: Get.width,
+                      height: Get.height,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.grey[100],
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(3.0),
+                            decoration: BoxDecoration(
+                              color: Colors.red[50],
+                              shape: BoxShape.circle,
                             ),
-                            SizedBox(
-                              height: 8.0,
+                            child: Icon(
+                              Icons.delete_forever_rounded,
+                              size: 20,
+                              color: Colors.red,
                             ),
-                            Text('Ditangani', style: GoogleFonts.poppins()),
-                            SizedBox(
-                              height: 8.0,
+                          ),
+                          SizedBox(
+                            height: 8.0,
+                          ),
+                          Text('Belum ', style: GoogleFonts.poppins()),
+                          SizedBox(
+                            height: 8.0,
+                          ),
+                          Text(
+                            '20',
+                            style: GoogleFonts.poppins(
+                              fontSize: 20.0,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
                             ),
-                            Text(
-                              '20',
-                              style: GoogleFonts.poppins(
-                                fontSize: 20.0,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 10.0,
-                  ),
-                  Expanded(
-                    child: Container(
-                      height: 120,
-                      child: Container(
-                        padding: EdgeInsets.all(10.0),
-                        width: Get.width,
-                        height: Get.height,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: Colors.grey[100],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              padding: EdgeInsets.all(3.0),
-                              decoration: BoxDecoration(
-                                color: Colors.red[50],
-                                shape: BoxShape.circle,
-                              ),
-                              child: Icon(
-                                Icons.delete_forever_rounded,
-                                size: 20,
-                                color: Colors.red,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 8.0,
-                            ),
-                            Text('Belum ', style: GoogleFonts.poppins()),
-                            SizedBox(
-                              height: 8.0,
-                            ),
-                            Text(
-                              '20',
-                              style: GoogleFonts.poppins(
-                                fontSize: 20.0,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          color: Colors.green[50],
-                          borderRadius: BorderRadius.circular(22),
-                        ),
-                        child: const Center(
-                          child: Icon(
-                            Icons.map_rounded,
-                            size: 50,
-                            color: Colors.green,
-                          ),
-                        )),
-                    SizedBox(
-                      height: 8.0,
-                    ),
-                    Text(
-                      'Report',
-                      style: GoogleFonts.poppins(),
-                    )
-                  ],
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 156, 212, 157),
-                          borderRadius: BorderRadius.circular(22),
-                        ),
-                        child: Center(
-                          child: Icon(Icons.recycling_rounded),
-                        )),
-                    SizedBox(
-                      height: 8.0,
-                    ),
-                    Text(
-                      'Taman',
-                      style: GoogleFonts.poppins(),
-                    )
-                  ],
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          color: Colors.red[50],
-                          borderRadius: BorderRadius.circular(22),
-                        ),
-                        child: Center(
-                          child: Icon(
-                            Icons.new_releases,
-                            size: 45,
-                            color: Colors.red,
-                          ),
-                        )),
-                    SizedBox(
-                      height: 8.0,
-                    ),
-                    Text(
-                      'Berita',
-                      style: GoogleFonts.poppins(),
-                    )
-                  ],
                 ),
               ],
             ),
-          ],
-        ));
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.green[50],
+                        borderRadius: BorderRadius.circular(22),
+                      ),
+                      child: const Center(
+                        child: Icon(
+                          Icons.map_rounded,
+                          size: 50,
+                          color: Colors.green,
+                        ),
+                      )),
+                  SizedBox(
+                    height: 8.0,
+                  ),
+                  Text(
+                    'Report',
+                    style: GoogleFonts.poppins(),
+                  )
+                ],
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 156, 212, 157),
+                        borderRadius: BorderRadius.circular(22),
+                      ),
+                      child: Center(
+                        child: Icon(Icons.recycling_rounded),
+                      )),
+                  SizedBox(
+                    height: 8.0,
+                  ),
+                  Text(
+                    'Taman',
+                    style: GoogleFonts.poppins(),
+                  )
+                ],
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.red[50],
+                        borderRadius: BorderRadius.circular(22),
+                      ),
+                      child: Center(
+                        child: Icon(
+                          Icons.new_releases,
+                          size: 45,
+                          color: Colors.red,
+                        ),
+                      )),
+                  SizedBox(
+                    height: 8.0,
+                  ),
+                  Text(
+                    'Berita',
+                    style: GoogleFonts.poppins(),
+                  )
+                ],
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 30,
+          )
+        ],
+      ),
+    );
   }
 }

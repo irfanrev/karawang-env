@@ -5,6 +5,7 @@ import 'package:karawang_env/ui/screen/faq/faq_screen.dart';
 import 'package:karawang_env/ui/screen/home/home_screen.dart';
 import 'package:karawang_env/ui/screen/notif/notif_screen.dart';
 import 'package:karawang_env/ui/screen/profile/profile_screen.dart';
+import 'package:karawang_env/ui/screen/sebaran/sebaran_sampah_screen.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class _NavBarState extends State<NavBar> {
 
   final layoutPage = [
     HomeScreen(),
-    NotifScreen(),
+    SebaranSampah(),
     FaqScreen(),
     ProfileScreen(),
   ];
