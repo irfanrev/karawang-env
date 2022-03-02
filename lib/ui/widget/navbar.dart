@@ -38,7 +38,7 @@ class _NavBarState extends State<NavBar> {
         size: 30,
       ),
       Icon(
-        Icons.notifications_active_rounded,
+        Icons.approval_rounded,
         size: 30,
       ),
       const Icon(
@@ -56,7 +56,7 @@ class _NavBarState extends State<NavBar> {
         backgroundColor: Colors.transparent,
         items: items,
         height: 60,
-        buttonBackgroundColor: Colors.green[200],
+        buttonBackgroundColor: Colors.green,
         //color: Color(0xFFC8E6C9),
         color: Color(0xFFE8F5E9),
         index: selectedIndex,

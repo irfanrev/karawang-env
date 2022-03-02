@@ -349,6 +349,20 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(
             height: 25,
           ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 20),
+            width: Get.width,
+            child: Text(
+              'Akses Cepat',
+              style: GoogleFonts.poppins(
+                fontSize: 18.0,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 8.0,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -385,11 +399,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 100,
                       height: 100,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 156, 212, 157),
+                        color: Colors.indigo[50],
                         borderRadius: BorderRadius.circular(22),
                       ),
                       child: Center(
-                        child: Icon(Icons.recycling_rounded),
+                        child: Icon(
+                          Icons.fastfood_rounded,
+                          size: 50,
+                          color: Colors.indigo,
+                        ),
                       )),
                   SizedBox(
                     height: 8.0,
@@ -412,7 +430,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       child: Center(
                         child: Icon(
-                          Icons.new_releases,
+                          Icons.chrome_reader_mode_rounded,
                           size: 45,
                           color: Colors.red,
                         ),
