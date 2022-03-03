@@ -47,7 +47,11 @@ class _FaqScreenState extends State<FaqScreen> {
                   ),
                 ),
               ),
-            )
+            ),
+            const Divider(),
+            Container(
+              width: Get.width,
+            ),
           ],
         ));
   }
