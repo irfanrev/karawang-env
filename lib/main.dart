@@ -4,8 +4,9 @@ import 'package:karawang_env/ui/screen/login/login_screen.dart';
 import 'package:karawang_env/ui/screen/welcome_screen.dart';
 import 'package:karawang_env/ui/widget/navbar.dart';
 import 'package:karawang_env/utils/splash_screen.dart';
+import 'package:supabase/supabase.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: NavBar(),
+      home: LoginScreen(),
     );
   }
 }

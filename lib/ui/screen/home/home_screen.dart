@@ -370,8 +370,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                      width: 100,
-                      height: 100,
+                      width: 80,
+                      height: 80,
                       decoration: BoxDecoration(
                         color: Colors.green[50],
                         borderRadius: BorderRadius.circular(22),
@@ -379,7 +379,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: const Center(
                         child: Icon(
                           Icons.map_rounded,
-                          size: 50,
+                          size: 45,
                           color: Colors.green,
                         ),
                       )),
@@ -396,8 +396,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                      width: 100,
-                      height: 100,
+                      width: 80,
+                      height: 80,
                       decoration: BoxDecoration(
                         color: Colors.indigo[50],
                         borderRadius: BorderRadius.circular(22),
@@ -405,7 +405,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Center(
                         child: Icon(
                           Icons.fastfood_rounded,
-                          size: 50,
+                          size: 45,
                           color: Colors.indigo,
                         ),
                       )),
@@ -422,8 +422,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                      width: 100,
-                      height: 100,
+                      width: 80,
+                      height: 80,
                       decoration: BoxDecoration(
                         color: Colors.red[50],
                         borderRadius: BorderRadius.circular(22),
