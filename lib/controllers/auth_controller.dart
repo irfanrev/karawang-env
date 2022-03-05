@@ -68,4 +68,12 @@ class AuthController extends GetxController {
       passLogin.text = '';
     }
   }
+
+  void logout() async {
+    final res = await supabase.auth.signOut();
+
+    final error = res.error;
+
+    Get.off(LoginScreen(), transition: Transition.fade);
+  }
 }
