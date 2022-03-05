@@ -1,10 +1,9 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:karawang_env/ui/screen/home/home_screen.dart';
 import 'package:karawang_env/ui/screen/login/login_screen.dart';
 import 'package:karawang_env/utils/loading_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase/supabase.dart';
 
 class AuthController extends GetxController {
@@ -14,6 +13,8 @@ class AuthController extends GetxController {
 
   var emailLogin = TextEditingController();
   var passLogin = TextEditingController();
+
+  bool isUser = false;
 
   final supabase = SupabaseClient('https://gerjjcnprrhywygrzmku.supabase.co',
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdlcmpqY25wcnJoeXd5Z3J6bWt1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY0NjI4ODAyNCwiZXhwIjoxOTYxODY0MDI0fQ.cpxf3roMO0rLIvBd6-qROtSM9SQWO-yBvoNwuR9bNQ0');
@@ -59,17 +60,21 @@ class AuthController extends GetxController {
     } else {
       final res = await supabase.auth
           .signIn(email: emailLogin.text, password: passLogin.text);
-
+      SharedPreferences preferences = await SharedPreferences.getInstance();
+      preferences.setBool('isUser', true);
       final user = res.data?.user;
       final error = res.error;
-      print(user);
-      Get.offAll(LoadingScreen(), transition: Transition.rightToLeft);
+
+      Get.to(LoadingScreen(), transition: Transition.rightToLeft);
       emailLogin.text = '';
       passLogin.text = '';
     }
   }
 
   void logout() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    preferences.remove('isUser');
+
     final res = await supabase.auth.signOut();
 
     final error = res.error;
