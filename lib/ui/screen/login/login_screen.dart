@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:karawang_env/controllers/auth_controller.dart';
 import 'package:karawang_env/ui/screen/home/home_screen.dart';
 import 'package:karawang_env/ui/screen/register/register_screen.dart';
 import 'package:karawang_env/utils/loading_screen.dart';
@@ -13,6 +14,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final authC = Get.put(AuthController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,6 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 15,
                 ),
                 TextField(
+                  controller: authC.emailLogin,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10)),
@@ -56,6 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 15,
                 ),
                 TextField(
+                  controller: authC.passLogin,
                   obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
@@ -67,8 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 35,
                 ),
                 ElevatedButton(
-                  onPressed: () => Get.to(LoadingScreen(),
-                      transition: Transition.rightToLeftWithFade),
+                  onPressed: () => authC.login(),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.green,
                     shape: RoundedRectangleBorder(
