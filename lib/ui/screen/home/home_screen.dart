@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:karawang_env/ui/screen/berita/berita_screen.dart';
+import 'package:karawang_env/ui/screen/report/report_screen.dart';
+import 'package:karawang_env/ui/screen/taman/taman_screen.dart';
 import 'package:karawang_env/ui/widget/slider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -136,14 +139,13 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 8.0),
-            margin: EdgeInsets.symmetric(horizontal: 20),
+            margin: EdgeInsets.symmetric(horizontal: 22),
             width: Get.width,
             height: 100,
             decoration: BoxDecoration(
-              color: Colors.indigo,
               borderRadius: BorderRadius.circular(12),
               gradient: LinearGradient(
-                colors: [Colors.indigo, Colors.blueAccent],
+                colors: [Colors.green, Colors.greenAccent],
               ),
             ),
             child: Row(
@@ -181,7 +183,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(color: Colors.white, width: 4)),
-                  child: Image.asset('assets/img/sampah.png'),
+                  child: Icon(
+                    Icons.delete_outline_rounded,
+                    size: 40,
+                    color: Colors.white,
+                  ),
                 ),
                 SizedBox(
                   width: 10,
@@ -369,20 +375,23 @@ class _HomeScreenState extends State<HomeScreen> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
-                      width: 80,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.green[50],
-                        borderRadius: BorderRadius.circular(22),
-                      ),
-                      child: const Center(
-                        child: Icon(
-                          Icons.map_rounded,
-                          size: 45,
-                          color: Colors.green,
+                  GestureDetector(
+                    onTap: () => Get.to(ReportScreen()),
+                    child: Container(
+                        width: 80,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          color: Colors.green[50],
+                          borderRadius: BorderRadius.circular(22),
                         ),
-                      )),
+                        child: const Center(
+                          child: Icon(
+                            Icons.map_rounded,
+                            size: 45,
+                            color: Colors.green,
+                          ),
+                        )),
+                  ),
                   SizedBox(
                     height: 8.0,
                   ),
@@ -395,20 +404,23 @@ class _HomeScreenState extends State<HomeScreen> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
-                      width: 80,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.indigo[50],
-                        borderRadius: BorderRadius.circular(22),
-                      ),
-                      child: Center(
-                        child: Icon(
-                          Icons.fastfood_rounded,
-                          size: 45,
-                          color: Colors.indigo,
+                  GestureDetector(
+                    onTap: () => Get.to(TamanScreen()),
+                    child: Container(
+                        width: 80,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          color: Colors.indigo[50],
+                          borderRadius: BorderRadius.circular(22),
                         ),
-                      )),
+                        child: Center(
+                          child: Icon(
+                            Icons.fastfood_rounded,
+                            size: 45,
+                            color: Colors.indigo,
+                          ),
+                        )),
+                  ),
                   SizedBox(
                     height: 8.0,
                   ),
@@ -421,20 +433,23 @@ class _HomeScreenState extends State<HomeScreen> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
-                      width: 80,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.red[50],
-                        borderRadius: BorderRadius.circular(22),
-                      ),
-                      child: Center(
-                        child: Icon(
-                          Icons.chrome_reader_mode_rounded,
-                          size: 45,
-                          color: Colors.red,
+                  GestureDetector(
+                    onTap: () => Get.to(BeritaScreen()),
+                    child: Container(
+                        width: 80,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          color: Colors.red[50],
+                          borderRadius: BorderRadius.circular(22),
                         ),
-                      )),
+                        child: Center(
+                          child: Icon(
+                            Icons.chrome_reader_mode_rounded,
+                            size: 45,
+                            color: Colors.red,
+                          ),
+                        )),
+                  ),
                   SizedBox(
                     height: 8.0,
                   ),

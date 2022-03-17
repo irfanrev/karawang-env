@@ -10,6 +10,10 @@ class BeritaScreen extends StatefulWidget {
 class _BeritaScreenState extends State<BeritaScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Berita Screen'),
+      ),
+    );
   }
 }
