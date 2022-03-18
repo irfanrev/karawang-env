@@ -359,7 +359,7 @@ class _HomeScreenState extends State<HomeScreen> {
             margin: EdgeInsets.symmetric(horizontal: 20),
             width: Get.width,
             child: Text(
-              'Akses Cepat',
+              'Menu Cepat',
               style: GoogleFonts.poppins(
                 fontSize: 18.0,
                 fontWeight: FontWeight.w500,
@@ -369,97 +369,156 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(
             height: 8.0,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  GestureDetector(
-                    onTap: () => Get.to(ReportScreen()),
-                    child: Container(
-                        width: 80,
-                        height: 80,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 120,
+                    child: GestureDetector(
+                      onTap: () => Get.to(ReportScreen()),
+                      child: Container(
+                        padding: EdgeInsets.all(10.0),
+                        width: Get.width,
+                        height: Get.height,
                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
                           color: Colors.green[50],
-                          borderRadius: BorderRadius.circular(22),
                         ),
-                        child: const Center(
-                          child: Icon(
-                            Icons.map_rounded,
-                            size: 45,
-                            color: Colors.green,
-                          ),
-                        )),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(3.0),
+                              decoration: BoxDecoration(
+                                color: Colors.green[50],
+                                shape: BoxShape.circle,
+                              ),
+                              child: Icon(
+                                Icons.map_rounded,
+                                size: 45,
+                                color: Colors.green,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 8.0,
+                            ),
+                            Text(
+                              'Report',
+                              style: GoogleFonts.poppins(
+                                fontSize: 18.0,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
-                  SizedBox(
-                    height: 8.0,
-                  ),
-                  Text(
-                    'Report',
-                    style: GoogleFonts.poppins(),
-                  )
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  GestureDetector(
-                    onTap: () => Get.to(TamanScreen()),
-                    child: Container(
-                        width: 80,
-                        height: 80,
+                ),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                Expanded(
+                  child: Container(
+                    height: 120,
+                    child: GestureDetector(
+                      onTap: () => Get.to(TamanScreen()),
+                      child: Container(
+                        padding: EdgeInsets.all(10.0),
+                        width: Get.width,
+                        height: Get.height,
                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
                           color: Colors.indigo[50],
-                          borderRadius: BorderRadius.circular(22),
                         ),
-                        child: Center(
-                          child: Icon(
-                            Icons.fastfood_rounded,
-                            size: 45,
-                            color: Colors.indigo,
-                          ),
-                        )),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(3.0),
+                              decoration: BoxDecoration(
+                                color: Colors.indigo[50],
+                                shape: BoxShape.circle,
+                              ),
+                              child: Icon(
+                                Icons.landscape_rounded,
+                                size: 45,
+                                color: Colors.indigo,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 8.0,
+                            ),
+                            Text(
+                              'Taman',
+                              style: GoogleFonts.poppins(
+                                fontSize: 18.0,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
-                  SizedBox(
-                    height: 8.0,
-                  ),
-                  Text(
-                    'Taman',
-                    style: GoogleFonts.poppins(),
-                  )
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  GestureDetector(
-                    onTap: () => Get.to(BeritaScreen()),
-                    child: Container(
-                        width: 80,
-                        height: 80,
+                ),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                Expanded(
+                  child: Container(
+                    height: 120,
+                    child: GestureDetector(
+                      onTap: () => Get.to(BeritaScreen()),
+                      child: Container(
+                        padding: EdgeInsets.all(10.0),
+                        width: Get.width,
+                        height: Get.height,
                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
                           color: Colors.red[50],
-                          borderRadius: BorderRadius.circular(22),
                         ),
-                        child: Center(
-                          child: Icon(
-                            Icons.chrome_reader_mode_rounded,
-                            size: 45,
-                            color: Colors.red,
-                          ),
-                        )),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(3.0),
+                              decoration: BoxDecoration(
+                                color: Colors.red[50],
+                                shape: BoxShape.circle,
+                              ),
+                              child: Icon(
+                                Icons.chrome_reader_mode_rounded,
+                                size: 45,
+                                color: Colors.red,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 8.0,
+                            ),
+                            Text(
+                              'Berita',
+                              style: GoogleFonts.poppins(
+                                fontSize: 18.0,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
-                  SizedBox(
-                    height: 8.0,
-                  ),
-                  Text(
-                    'Berita',
-                    style: GoogleFonts.poppins(),
-                  )
-                ],
-              ),
-            ],
+                ),
+              ],
+            ),
           ),
           SizedBox(
             height: 30,
