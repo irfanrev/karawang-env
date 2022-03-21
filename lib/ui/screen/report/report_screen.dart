@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:karawang_env/ui/screen/home/home_screen.dart';
+import 'package:lottie/lottie.dart';
 
 class ReportScreen extends StatefulWidget {
   const ReportScreen({Key? key}) : super(key: key);
@@ -32,6 +34,24 @@ class _ReportScreenState extends State<ReportScreen> {
   void initState() {
     super.initState();
     _dateText = "${_dueDate.day}/${_dueDate.month}/${_dueDate.year}";
+  }
+
+  void _submitReport() {
+    Get.defaultDialog(
+      title: 'Submit Success!',
+      titleStyle: TextStyle(
+        color: Colors.green,
+        fontSize: 25,
+      ),
+      radius: 15.0,
+      content: Container(
+        width: 200,
+        height: 200,
+        child: Lottie.asset('assets/lottie/success.json'),
+      ),
+      textConfirm: 'Ok',
+      onConfirm: () => Get.offAll(ReportScreen()),
+    );
   }
 
   @override
@@ -229,7 +249,7 @@ class _ReportScreenState extends State<ReportScreen> {
                           height: 25,
                         ),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: _submitReport,
                           style: ElevatedButton.styleFrom(
                             primary: Colors.green,
                             shape: RoundedRectangleBorder(
