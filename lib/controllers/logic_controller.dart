@@ -10,8 +10,6 @@ class LogicController extends GetxController {
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdlcmpqY25wcnJoeXd5Z3J6bWt1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY0NjI4ODAyNCwiZXhwIjoxOTYxODY0MDI0fQ.cpxf3roMO0rLIvBd6-qROtSM9SQWO-yBvoNwuR9bNQ0');
 
   void submitReport() {
-    
-
     Get.defaultDialog(
       title: 'Submit Success!',
       titleStyle: TextStyle(
@@ -25,7 +23,7 @@ class LogicController extends GetxController {
         child: Lottie.asset('assets/lottie/success.json'),
       ),
       textConfirm: 'Ok',
-      onConfirm: () => Get.offAll(ReportScreen()),
+      onConfirm: () => Get.to(ReportScreen()),
     );
   }
 }

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:flutter_map/flutter_map.dart' as tandai;
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:karawang_env/controllers/logic_controller.dart';
 import 'package:karawang_env/ui/screen/home/home_screen.dart';
 import 'package:lottie/lottie.dart';
+import 'package:latlong2/latlong.dart' as latLng;
 
 class ReportScreen extends StatefulWidget {
   const ReportScreen({Key? key}) : super(key: key);
@@ -47,7 +50,52 @@ class _ReportScreenState extends State<ReportScreen> {
             Container(
               width: MediaQuery.of(context).size.width,
               height: 350,
-              color: Colors.green[200],
+              child: FlutterMap(
+                options: MapOptions(
+                  center: latLng.LatLng(-6.310507, 107.293131),
+                  zoom: 18.0,
+                ),
+                layers: [
+                  TileLayerOptions(
+                    urlTemplate:
+                        "https://api.mapbox.com/styles/v1/irfanrev/ckyy14nmg002i15p7dmad3zfk/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaXJmYW5yZXYiLCJhIjoiY2t5eHYzYnBoMG0wNjJ2bzJsdmVmYTJuciJ9.4B_V8Hbrff-1_045m2ULRA",
+                    additionalOptions: {
+                      'accessToken':
+                          'pk.eyJ1IjoiaXJmYW5yZXYiLCJhIjoiY2t5eHYzYnBoMG0wNjJ2bzJsdmVmYTJuciJ9.4B_V8Hbrff-1_045m2ULRA',
+                      'id': 'mapbox.mapbox-streets-v8'
+                    },
+                    attributionBuilder: (_) {
+                      return Text("© OpenStreetMap contributors");
+                    },
+                  ),
+                  MarkerLayerOptions(
+                    markers: [
+                      tandai.Marker(
+                        width: 80.0,
+                        height: 80.0,
+                        point: latLng.LatLng(-6.310507, 107.293131),
+                        builder: (ctx) => Container(
+                            child: Icon(
+                          Icons.location_on,
+                          color: Colors.green,
+                          size: 40,
+                        )),
+                      ),
+                      tandai.Marker(
+                        width: 80.0,
+                        height: 80.0,
+                        point: latLng.LatLng(-6.3110544, 107.2926278),
+                        builder: (ctx) => Container(
+                            child: Icon(
+                          Icons.location_on,
+                          color: Colors.red,
+                          size: 40,
+                        )),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
             DraggableScrollableSheet(
               expand: true,
