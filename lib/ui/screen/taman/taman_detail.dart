@@ -130,7 +130,7 @@ class _TamanDetailState extends State<TamanDetail> {
                               'Peta Lokasi',
                               style: GoogleFonts.poppins(
                                 fontSize: 16.0,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
@@ -191,6 +191,84 @@ class _TamanDetailState extends State<TamanDetail> {
                                 ),
                               ],
                             ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            width: Get.width,
+                            height: 55,
+                            child: Row(
+                              children: [
+                                Expanded(
+                                    child: InkWell(
+                                  onTap: () {},
+                                  child: Container(
+                                    width: Get.width,
+                                    height: Get.height,
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius: BorderRadius.circular(8)),
+                                    child: Center(
+                                        child: Text(
+                                      'Rute',
+                                      style: GoogleFonts.poppins(
+                                        color: Colors.white,
+                                        fontSize: 18.0,
+                                      ),
+                                    )),
+                                  ),
+                                )),
+                                SizedBox(
+                                  width: 12,
+                                ),
+                                Expanded(
+                                  child: InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      width: Get.width,
+                                      height: Get.height,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                        color: Colors.amber,
+                                      ),
+                                      child: Center(
+                                          child: Text(
+                                        'Kunjugi nanti',
+                                        style: GoogleFonts.poppins(
+                                          color: Colors.white,
+                                          fontSize: 18.0,
+                                        ),
+                                      )),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 25,
+                          ),
+                          Container(
+                            child: Text(
+                              'Fasilitas',
+                              style: GoogleFonts.poppins(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: Get.width,
+                            child: Text(
+                              'Masjid, WC, Soufenir',
+                              style: GoogleFonts.poppins(
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
                           ),
                           SizedBox(
                             height: 50,
